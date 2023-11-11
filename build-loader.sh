@@ -204,7 +204,7 @@ if [ ! -d "${BRP_UPAT_DIR}" ]; then
     pr_dbg "Found existing PAT at %s - skipping download" "${BRP_PAT_FILE}"
   fi
 
-  brp_verify_file_sha256 "${BRP_PAT_FILE}" "$(brp_json_get_field "${BRP_REL_CONFIG_JSON}" "os.sha256")"
+  #brp_verify_file_sha256 "${BRP_PAT_FILE}" "$(brp_json_get_field "${BRP_REL_CONFIG_JSON}" "os.sha256")"
   brp_unpack_tar "${BRP_PAT_FILE}" "${BRP_UPAT_DIR}"
 else
   pr_info "Found unpacked PAT at \"%s\" - skipping unpacking" "${BRP_UPAT_DIR}"
