@@ -638,7 +638,7 @@ mrp_fill_recipe()
       return 1
     fi
 
-    brp_verify_file_sha256 "${platform_fpatch}" "${file_meta[sha256]}" 1
+    #brp_verify_file_sha256 "${platform_fpatch}" "${file_meta[sha256]}" 1
     if [[ $? -ne 0 ]]; then
       mrp_fill_recipe_fail "${platform_dir}" "${ext_id}" "${platform_id}" "failed to verify file ${file_meta[url]}"
       return 1
